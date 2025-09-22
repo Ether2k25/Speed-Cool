@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Speed Cool - Professional Repair Services</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,6 +20,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#videos">Videos</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -31,13 +32,14 @@
         <div class="hero-content">
             <h1>Expert Repair Services at Your Doorstep</h1>
             <p>Professional AC, Refrigerator, Washing Machine & Water Jet Services</p>
-            <button class="cta-button" onclick="scrollToContact()">
+            <button class="cta-button" onclick="window.location.href='tel:+918970311346'">
                 <i class="fas fa-phone"></i> Contact Now
             </button>
         </div>
         <div class="hero-image">
             <i class="fas fa-wrench"></i>
         </div>
+        
     </section>
 
     <!-- Services Section -->
@@ -52,7 +54,14 @@
                     <h3>AC General Service</h3>
                     <p>Complete AC maintenance and repair service</p>
                     <div class="price">₹500</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -62,7 +71,14 @@
                     <h3>Jet Water Service</h3>
                     <p>High-pressure water jet cleaning service</p>
                     <div class="price">₹1500</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -72,7 +88,14 @@
                     <h3>Refrigerator Service</h3>
                     <p>Professional refrigerator repair and maintenance</p>
                     <div class="price">₹500</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -82,7 +105,14 @@
                     <h3>Foam Service with Deep Cleaning</h3>
                     <p>Deep foam cleaning for appliances</p>
                     <div class="price">₹800</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -92,7 +122,14 @@
                     <h3>Washing Machine Service</h3>
                     <p>Complete washing machine repair service</p>
                     <div class="price">₹500</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -102,7 +139,14 @@
                     <h3>Chemical Service</h3>
                     <p>Professional chemical cleaning service</p>
                     <div class="price">₹800</div>
-                    <button class="service-btn" onclick="scrollToContact()">Book Now</button>
+                    <div class="booking-options">
+                        <a href="https://wa.me/918970311346" target="_blank" class="service-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                        </a>
+                        <a href="tel:+918970311346" class="service-btn call-btn">
+                            <i class="fas fa-phone"></i> Book over a Call
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,31 +158,45 @@
             <h2 class="section-title">Our Work Gallery</h2>
             <div class="slideshow-container">
                 <div class="slide active">
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" alt="AC Service">
+                    <img src="images/1st.webp" alt="Speed Cool Service Work">
                     <div class="slide-content">
-                        <h3>AC Service & Repair</h3>
-                        <p>Professional AC maintenance and installation</p>
+                        <h3>Professional Service Work</h3>
+                        <p>Expert appliance repair and maintenance</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&h=600&fit=crop" alt="Refrigerator Service">
+                    <img src="images/2nd.webp" alt="Speed Cool Service Work">
                     <div class="slide-content">
-                        <h3>Refrigerator Repair</h3>
-                        <p>Expert refrigerator servicing and maintenance</p>
+                        <h3>Quality Repair Services</h3>
+                        <p>Professional technician at work</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=800&h=600&fit=crop" alt="Washing Machine Service">
+                    <img src="images/3rd.webp" alt="Speed Cool Service Work">
                     <div class="slide-content">
-                        <h3>Washing Machine Service</h3>
-                        <p>Complete washing machine repair solutions</p>
+                        <h3>Expert Maintenance</h3>
+                        <p>Comprehensive appliance servicing</p>
                     </div>
                 </div>
                 <div class="slide">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=600&fit=crop" alt="Water Jet Service">
+                    <img src="images/4th.webp" alt="Speed Cool Service Work">
                     <div class="slide-content">
-                        <h3>Water Jet Cleaning</h3>
-                        <p>High-pressure cleaning services</p>
+                        <h3>Professional Installation</h3>
+                        <p>Complete setup and repair solutions</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/5th.webp" alt="Speed Cool Service Work">
+                    <div class="slide-content">
+                        <h3>Technical Excellence</h3>
+                        <p>Advanced repair techniques and tools</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/6th.webp" alt="Speed Cool Service Work">
+                    <div class="slide-content">
+                        <h3>Customer Satisfaction</h3>
+                        <p>Delivering quality service every time</p>
                     </div>
                 </div>
                 
@@ -152,6 +210,150 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                     <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2 class="section-title">Our Work Videos</h2>
+            <p class="section-subtitle">Watch our professional repair services in action</p>
+            <div class="videos-grid">
+                <!-- AC Services -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/AC.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>AC Service & Repair</h3>
+                        <p>Professional AC maintenance and repair service</p>
+                    </div>
+                </div>
+
+                <!-- Refrigerator Services -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Refrigerator.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Refrigerator Service</h3>
+                        <p>Expert refrigerator troubleshooting and repair work</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Double Door Refrigerator.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Double Door Refrigerator Service</h3>
+                        <p>Specialized double door refrigerator maintenance</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Double Door Fridg.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Double Door Fridge Repair</h3>
+                        <p>Professional double door fridge repair service</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Side by Side Refrigerator.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Side by Side Refrigerator</h3>
+                        <p>Side by side refrigerator repair and maintenance</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Commercial Refrigerator.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Commercial Refrigerator Service</h3>
+                        <p>Professional commercial refrigerator repair</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Refrigerator Condensor.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Refrigerator Condenser Service</h3>
+                        <p>Specialized condenser cleaning and maintenance</p>
+                    </div>
+                </div>
+
+                <!-- Washing Machine Services -->
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Washing Machine.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Washing Machine Service</h3>
+                        <p>Complete washing machine repair and maintenance</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Front Load Washing Machine.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Front Load Washing Machine</h3>
+                        <p>Specialized front load washing machine service</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls preload="metadata">
+                            <source src="videos/Washing Machine 2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-info">
+                        <h3>Washing Machine Repair</h3>
+                        <p>Advanced washing machine troubleshooting and repair</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,19 +368,15 @@
                     <h3>Get in Touch</h3>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>+91 9876543210</span>
+                        <span>+91 8970311346</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>info@speedcool.com</span>
+                        <span>jitheshanchan31@gmail.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>123 Service Street, City, State 12345</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <span>24/7 Emergency Service Available</span>
+                        <span>Gurupura Kaikamba, Mangalore, Karnataka, 574151</span>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -219,6 +417,8 @@
                 <div class="footer-section">
                     <h3><i class="fas fa-tools"></i> Speed Cool</h3>
                     <p>Your trusted partner for all appliance repair needs. Professional, reliable, and affordable services.</p>
+                    <p><strong>Follow us on Instagram:</strong> <a href="https://www.instagram.com/spe.edcool?igsh=ZHphbW80czk3anVr" target="_blank" style="color: #e4405f;">@spe.edcool</a></p>
+                    <p><em>Refrigeration and Air conditioning specialists</em></p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -226,6 +426,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#videos">Videos</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -247,19 +448,16 @@
 
     <!-- Sticky Social Media Icons -->
     <div class="social-sticky">
-        <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+        <a href="https://www.facebook.com/share/1AFNHXETQC/" target="_blank" class="social-icon facebook">
             <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+        <a href="https://www.instagram.com/spe.edcool?igsh=ZHphbW80czk3anVr" target="_blank" class="social-icon instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://twitter.com" target="_blank" class="social-icon twitter">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://whatsapp.com" target="_blank" class="social-icon whatsapp">
+        <a href="https://wa.me/918970311346" target="_blank" class="social-icon whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="tel:+919876543210" class="social-icon phone">
+        <a href="tel:+918970311346" class="social-icon phone">
             <i class="fas fa-phone"></i>
         </a>
     </div>
