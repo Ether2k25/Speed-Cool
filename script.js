@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoSlide();
     initBackToTop();
     initContactForm();
+    initVideoControls();
 });
 
 // Show specific slide
@@ -119,15 +120,47 @@ function initContactForm() {
             return;
         }
         
-        // Simulate form submission
-        showNotification('Thank you! Your service request has been submitted. We will contact you soon.', 'success');
+        // Create WhatsApp message
+        redirectToWhatsApp(name, phone, service, message);
         
-        // Reset form
-        contactForm.reset();
-        
-        // In a real application, you would send this data to a server
-        console.log('Form submitted:', { name, phone, service, message });
+        // Reset form after a short delay
+        setTimeout(() => {
+            contactForm.reset();
+        }, 1000);
     });
+}
+
+// Function to redirect to WhatsApp with form details
+function redirectToWhatsApp(name, phone, service, message) {
+    // Speed Cool business WhatsApp number (replace with actual number)
+    const businessWhatsAppNumber = '919876543210'; // Replace with actual business number
+    
+    // Get service name from the select option
+    const serviceSelect = document.getElementById('service');
+    const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];
+    const serviceName = selectedOption.text;
+    
+    // Create formatted WhatsApp message
+    let whatsappMessage = "Name: " + name + "\n";
+    whatsappMessage += "Phone: " + phone + "\n";
+    whatsappMessage += "Service: " + serviceName + "\n";
+    whatsappMessage += "Details: " + (message || 'No additional details');
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${businessWhatsAppNumber}?text=${encodedMessage}`;
+    
+    // Show success notification
+    showNotification('Redirecting to WhatsApp...', 'success');
+    
+    // Open WhatsApp in a new tab/window
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+    }, 1500);
+    
+    console.log('WhatsApp redirect:', whatsappURL);
 }
 
 // Notification system
@@ -409,5 +442,34 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+// Video controls - ensure only one video plays at a time
+function initVideoControls() {
+    const videos = document.querySelectorAll('.video-container video');
+    
+    videos.forEach(video => {
+        video.addEventListener('play', function() {
+            // Pause all other videos when this one starts playing
+            videos.forEach(otherVideo => {
+                if (otherVideo !== video && !otherVideo.paused) {
+                    otherVideo.pause();
+                }
+            });
+        });
+        
+        // Optional: Add visual feedback when video is playing
+        video.addEventListener('play', function() {
+            this.closest('.video-card').classList.add('playing');
+        });
+        
+        video.addEventListener('pause', function() {
+            this.closest('.video-card').classList.remove('playing');
+        });
+        
+        video.addEventListener('ended', function() {
+            this.closest('.video-card').classList.remove('playing');
+        });
+    });
+}
 
 console.log('Speed Cool website loaded successfully! 🚀');
